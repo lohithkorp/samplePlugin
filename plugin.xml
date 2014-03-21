@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="org.devgirl.calendar" version="0.1.0">
+<name>Example Plugin</name>    
+<description>Sample PhoneGap Plugin</description>    
+<license>MIT</license>    
+<keywords>phonegap, samplePlugin</keywords>      
+
+<js-module src="www/exPluginNew.js" name="expluginNew">        
+   <clobbers target="plugins.expluginNew" />    
+</js-module>     
+
+<!-- android -->    
+<platform name="android">        
+<config-file target="res/xml/config.xml" parent="/*">            
+<feature name="exPlugin">               
+<param name="android-package" value="com.example.myplugin.simplePlugin"/>            
+</feature>        
+</config-file>         
+
+<source-file src="src/android/simplePlugin.java" target-dir="src/com/example/simplePlugin" />           
+</platform>          
+
+</plugin>
